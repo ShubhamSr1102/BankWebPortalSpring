@@ -20,7 +20,6 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
 	@Override
 	public Customer authenticate(Customer customer) throws SQLException {
-		System.out.println(customer);
 		customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id = ? AND customer_password = ?",
 				new Object[] { customer.getCustomerId(),customer.getCustomerPassword() }, new CustomerRowMapper());
 		BankAccount bankAccount = jdbcTemplate.queryForObject(

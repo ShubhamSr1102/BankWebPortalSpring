@@ -16,7 +16,6 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	@Override
 	public Customer authenticate(Customer customer) throws SQLException {
-		System.out.println(customer);
 		return customerRepositoryImpl.authenticate(customer);
 	}
 

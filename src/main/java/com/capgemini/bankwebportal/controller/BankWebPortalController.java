@@ -48,14 +48,11 @@ public class BankWebPortalController {
 			return "enableCookie";
 		} else {
 			try {
-				System.out.println(customer);
 				customer = customerServiceImpl.authenticate(customer);
 			} catch (SQLException | NumberFormatException | EmptyResultDataAccessException e) {
 				request.setAttribute("name", "true");
-				System.out.println(customer);
 				customer = null;
 			} finally {
-				System.out.println(customer);
 				if (customer != null) {
 					request.getSession(false);
 					session.setAttribute("customer", customer);
