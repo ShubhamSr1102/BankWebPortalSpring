@@ -10,7 +10,7 @@ public interface CustomerRepository {
 
 	public Customer updateProfile(Customer customer) throws SQLException;
 
-	public boolean updatePassword(Customer customer, String oldPassword, String newPassword) throws SQLException;
+	public boolean updatePassword(Customer customer, String oldPassword, String newPassword);
 
-	public Customer updateSession(long customerId);
+	public Customer updateSession(long customerId) throws SQLException;
 }

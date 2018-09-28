@@ -15,13 +15,13 @@ public class BankAccountRepositoryImpl implements BankAccountRepository {
 	private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public double getBalance(long accountId) throws SQLException {
+	public double getBalance(long accountId)  {
 		 return jdbcTemplate.queryForObject("SELECT balance FROM accounts WHERE account_id = ?",
 				new Object[] { accountId }, Double.class);
 	}
 
 	@Override
-	public boolean updateBalance(long accountId, double newBalance)throws SQLException {
+	public boolean updateBalance(long accountId, double newBalance) {
 		int count = jdbcTemplate.update(
 				"UPDATE accounts SET balance = ? WHERE account_id = ?",
 				new Object[] { newBalance,accountId});

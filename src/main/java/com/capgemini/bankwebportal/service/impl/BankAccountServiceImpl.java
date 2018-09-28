@@ -18,19 +18,19 @@ public class BankAccountServiceImpl implements BankAccountService {
 	BankAccountServiceImpl serviceobject;
 
 	@Override
-	public double getBalance(long accountId) throws SQLException {
+	public double getBalance(long accountId) {
 		return bankAccountRepositoryImpl.getBalance(accountId);
 	}
 
 	@Override
-	public double withdraw(long accountId, double amount) throws SQLException {
+	public double withdraw(long accountId, double amount) {
 		double accountBalance = bankAccountRepositoryImpl.getBalance(accountId);
 		bankAccountRepositoryImpl.updateBalance(accountId, accountBalance - amount);
 		return accountBalance - amount;
 	}
 
 	@Override
-	public double deposit(long accountId, double amount) throws SQLException {
+	public double deposit(long accountId, double amount) {
 		double accountBalance = bankAccountRepositoryImpl.getBalance(accountId);
 		bankAccountRepositoryImpl.updateBalance(accountId, accountBalance + amount);
 		return accountBalance + amount;

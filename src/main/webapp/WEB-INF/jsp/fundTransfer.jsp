@@ -26,7 +26,7 @@
     </div>
     <div class="form-group col-md-6">
       <label >Receiver's Account Id</label>
-      <input type="number" class="form-control" name="toAcc" placeholder="Account Id">
+      <input type="number" class="form-control" name="toAcc" placeholder="Account Id" required="required">
     </div>
   </div>
   <div class="form-group">

@@ -30,7 +30,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	}
 
 	@Override
-	public Customer updateProfile(Customer customer) {
+	public Customer updateProfile(Customer customer)throws SQLException {
 		jdbcTemplate.update(
 				"UPDATE customers SET customer_address = ?,customer_dob = ?,customer_emailid=?,customer_name=?   WHERE customer_id = ?",
 				new Object[] { customer.getCustomerAddress(), customer.getCustomerDateOfBirth(),
@@ -51,7 +51,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	}
 
 	@Override
-	public Customer updateSession(long customerId) {
+	public Customer updateSession(long customerId)throws SQLException {
 		Customer customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id=?",
 				new Object[] { customerId }, new CustomerRowMapper());
 		BankAccount bankAccount = jdbcTemplate.queryForObject(

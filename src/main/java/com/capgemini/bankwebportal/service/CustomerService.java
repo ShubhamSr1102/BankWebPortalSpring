@@ -7,8 +7,8 @@ import com.capgemini.bankwebportal.model.Customer;
 public interface CustomerService {
 
 	public Customer authenticate(Customer customer) throws SQLException;
-	public Customer updateProfile(Customer customer);
+	public Customer updateProfile(Customer customer) throws SQLException;
 	public boolean updatePassword(Customer customer, String oldPassword, String newPassword);
-	public Customer updateSession(long customerId); 
+	public Customer updateSession(long customerId) throws SQLException; 
 
 }

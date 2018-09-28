@@ -3,7 +3,15 @@ package com.capgemini.bankwebportal.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 public class Customer {
 
@@ -13,9 +21,17 @@ public class Customer {
 				+ customerPassword + ", customerEmail=" + customerEmail + ", customerAddress=" + customerAddress
 				+ ", customerDateOfBirth=" + customerDateOfBirth + ", account=" + account + "]";
 	}
+	
+	//@Size(min=3, message="Customer ID should have atleast 3 characters")
+	@NotNull(message="Customer ID cannot be blank")
+	@Positive(message="Customer ID cannot be negative")
 	private long customerId;
 	private String customerName;
+	@NotEmpty(message="Password cannot be blank")
+	@Size(min=5, message="Password should have atleast 5 characters")
+//	@Pattern(regexp = "^[A-Za-z0-9]+$")
 	private String customerPassword;
+	@Email
 	private String customerEmail;
 	private String customerAddress;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")

@@ -80,12 +80,13 @@
 <form:form class="p-4" action="login" method="post" modelAttribute="customer">
   <div class="form-group">
     <form:label path="customerId">Customer Id:</form:label>
-    <form:input type="number" class="form-control" id="exampleDropdownFormEmail2" path="customerId" placeholder="customer id"/>
-
+    <form:input type="number" class="form-control" id="exampleDropdownFormEmail2" path="customerId" placeholder="customer id" required = "required"/>
+	<form:errors path="customerId" cssClass = "error" />
   </div>
   <div class="form-group">
     <form:label path="customerPassword">Password</form:label>
-    <form:input type="password" class="form-control" id="exampleDropdownFormPassword2" path="customerPassword" placeholder="Password"/>
+    <form:input type="password" class="form-control" id="exampleDropdownFormPassword2" path="customerPassword" placeholder="Password" required = "required"/>
+   <form:errors path="customerPassword" cssClass = "error" />
   </div>
   <br>
  <button type="submit" class="btn btn-primary btn-sm btn-block">Sign in</button>
@@ -95,6 +96,12 @@
     </div>
 		
     </c:if>
+    <%--  <c:if test = "${requestScope.password==true }">
+    <div class="alert alert-danger" role="alert">
+    Password Cannot be Blank!
+    </div>
+		
+    </c:if> --%>
 </form:form>
 </div>
 </div>
