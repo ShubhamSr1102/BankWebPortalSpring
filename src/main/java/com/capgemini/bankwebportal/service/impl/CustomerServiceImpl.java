@@ -1,13 +1,10 @@
 package com.capgemini.bankwebportal.service.impl;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.bankwebportal.exceptions.AccountNotFoundException;
-import com.capgemini.bankwebportal.exceptions.OperationFailedException;
 import com.capgemini.bankwebportal.model.Customer;
 import com.capgemini.bankwebportal.repository.CustomerRepository;
 import com.capgemini.bankwebportal.service.CustomerService;
@@ -30,8 +27,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Customer updateProfile(Customer customer){
-			return customerRepository.updateProfile(customer);
+	public Customer updateProfile(Customer customer) {
+		return customerRepository.updateProfile(customer);
 	}
 
 	@Override

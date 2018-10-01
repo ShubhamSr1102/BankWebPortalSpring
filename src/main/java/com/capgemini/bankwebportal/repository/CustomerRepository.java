@@ -6,7 +6,7 @@ import com.capgemini.bankwebportal.model.Customer;
 
 public interface CustomerRepository {
 
-	public Customer authenticate(Customer customer)throws DataAccessException;
+	public Customer authenticate(Customer customer) throws DataAccessException;
 
 	public Customer updateProfile(Customer customer);
 

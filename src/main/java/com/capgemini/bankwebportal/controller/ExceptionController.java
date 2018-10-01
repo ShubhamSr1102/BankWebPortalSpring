@@ -13,11 +13,12 @@ import com.capgemini.bankwebportal.model.Customer;
 
 @ControllerAdvice
 public class ExceptionController {
-	
+
 	@ExceptionHandler(value = AccountNotFoundException.class)
-	public String handlheError(HttpServletRequest request, AccountNotFoundException exception, Model model) {
+	public String AccountNotFoundException(HttpServletRequest request, AccountNotFoundException exception,
+			Model model) {
 		System.out.println(exception);
-		
+
 		request.setAttribute("name", "true");
 		request.setAttribute("accountnotfound", "true");
 		System.out.println(exception.getCause());
@@ -26,15 +27,16 @@ public class ExceptionController {
 	}
 
 	@ExceptionHandler(value = InsufficientAccountBalanceException.class)
-	public String handlheErrorf(HttpServletRequest request, InsufficientAccountBalanceException exception) {
+	public String InsufficientAccountBalanceException(HttpServletRequest request,
+			InsufficientAccountBalanceException exception) {
 		System.out.println(exception);
 		request.setAttribute("insufficientbalance", "true");
 		System.out.println(exception.getCause());
 		return "success";
 	}
-	
+
 	@ExceptionHandler(value = NegativeAmountException.class)
-	public String handlheErrorf(HttpServletRequest request, NegativeAmountException exception) {
+	public String NegativeAmountException(HttpServletRequest request, NegativeAmountException exception) {
 		System.out.println(exception);
 		request.setAttribute("negativeamount", "true");
 		System.out.println(exception.getCause());
