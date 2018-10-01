@@ -44,12 +44,9 @@ public class CustomerController {
 		} else {
 			customer = customerService.authenticate(customer);
 
-			if (customer.getCustomerName() != null) {
-				request.getSession(false);
-				session.setAttribute("customer", customer);
-				return "redirect:/home";
-			}
-			return "index";
+			request.getSession(false);
+			session.setAttribute("customer", customer);
+			return "redirect:/home";
 		}
 	}
 
@@ -58,12 +55,9 @@ public class CustomerController {
 		request.getSession(false);
 		Customer cust = (Customer) session.getAttribute("customer");
 		Customer customer;
-		try {
-			customer = customerService.updateSession(cust.getCustomerId());
-		} catch (SQLException e) {
-			customer = null;
-			e.printStackTrace();
-		}
+
+		customer = customerService.updateSession(cust.getCustomerId());
+
 		request.getSession().setAttribute("customer", customer);
 		return "home";
 	}
@@ -116,22 +110,11 @@ public class CustomerController {
 		}
 	}
 
-	@SuppressWarnings("finally")
 	@RequestMapping(value = "/updateProfile", method = RequestMethod.POST)
 	public String updateProfile(@ModelAttribute Customer customer, HttpServletRequest request, HttpSession session) {
-		try {
-			customer = customerService.updateProfile(customer);
-		} catch (SQLException e) {
-			customer = null;
-			e.printStackTrace();
-		} finally {
-			if (customer != null) {
-				request.getSession().setAttribute("customer", customer);
-				return "redirect:/home";
-			} else {
-				request.setAttribute("profileupdate", "false");
-				return "edit";
-			}
-		}
+		customer = customerService.updateProfile(customer);
+		request.getSession().setAttribute("customer", customer);
+		return "redirect:/home";
+
 	}
 }

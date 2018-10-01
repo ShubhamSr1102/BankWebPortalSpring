@@ -29,34 +29,31 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 			BankAccount bankAccount = jdbcTemplate.queryForObject(
 					"SELECT * FROM accounts WHERE account_id = (SELECT account_id FROM customers WHERE customer_id = ?)",
 					new Object[] { customer.getCustomerId() }, new AccountRowMapper());
-					customer.setAccount(bankAccount);
-					return customer;
+			customer.setAccount(bankAccount);
+			return customer;
 		} catch (DataAccessException e) {
 			e.initCause(new EmptyResultDataAccessException("Expected 1 actual 0 ", 1));
-			// System.out.println("repo "+ e.getCause());
 			throw e;
 		}
 	}
 
 	@Override
-	public Customer updateProfile(Customer customer) throws DataAccessException {
-		jdbcTemplate.update(
-				"UPDATE customers SET customer_address = ?,customer_dob = ?,customer_emailid=?,customer_name=?   WHERE customer_id = ?",
-				new Object[] { customer.getCustomerAddress(), customer.getCustomerDateOfBirth(),
-						customer.getCustomerEmail(), customer.getCustomerName(), customer.getCustomerId() });
-		customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id=?",
-				new Object[] { customer.getCustomerId() }, new CustomerRowMapper());
-		return customer;
-
+	public Customer updateProfile(Customer customer) {
+			jdbcTemplate.update(
+					"UPDATE customers SET customer_address = ?,customer_dob = ?,customer_emailid=?,customer_name=?   WHERE customer_id = ?",
+					new Object[] { customer.getCustomerAddress(), customer.getCustomerDateOfBirth(),
+							customer.getCustomerEmail(), customer.getCustomerName(), customer.getCustomerId() });
+			customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id=?",
+					new Object[] { customer.getCustomerId() }, new CustomerRowMapper());
+			return customer;
 	}
 
 	@Override
 	public boolean updatePassword(Customer customer, String oldPassword, String newPassword) {
-		int count = jdbcTemplate.update(
-				"UPDATE customers SET customer_password = ?  WHERE customer_id = ? AND customer_password = ?",
-				new Object[] { newPassword, customer.getCustomerId(), oldPassword });
-		return (count != 0) ? true : false;
-
+			int count = jdbcTemplate.update(
+					"UPDATE customers SET customer_password = ?  WHERE customer_id = ? AND customer_password = ?",
+					new Object[] { newPassword, customer.getCustomerId(), oldPassword });
+			return (count != 0) ? true : false;
 	}
 
 	@Override

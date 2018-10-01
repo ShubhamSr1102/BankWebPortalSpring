@@ -40,7 +40,6 @@ public class BankAccountController {
 	
 	@RequestMapping(value = "/fundTransferMethod", method = RequestMethod.POST)
 	public String fundTransferMethod(HttpServletRequest request, HttpSession session,@RequestParam long fromAcc, @RequestParam long toAcc, @RequestParam double amount) {
-		try {
 			if (bankAccountService.fundTransfer(fromAcc, toAcc, amount)) {
 				request.setAttribute("success", "true");
 				request.getSession();
@@ -48,16 +47,6 @@ public class BankAccountController {
 				Customer customer = customerService.updateSession(cust.getCustomerId());
 				request.getSession().setAttribute("customer", customer);
 			}
-
-		} catch (SQLException | InsufficientAccountBalanceException | NegativeAmountException | EmptyResultDataAccessException  e) {
-			if (e instanceof NegativeAmountException) {
-				request.setAttribute("negativeamount", "true");
-			} else if (e instanceof InsufficientAccountBalanceException) {
-				request.setAttribute("insufficientbalance", "true");
-			} else {
-				request.setAttribute("accountnotfound", "true");
-			}
-		}
 		return "fundTransfer";
 	}
 }
