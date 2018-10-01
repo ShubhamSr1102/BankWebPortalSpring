@@ -28,23 +28,20 @@ public class CustomerController {
 		return "index";
 	}
 
-	@SuppressWarnings("finally")
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String customerLogin(HttpServletRequest request, HttpSession session,
 			@Valid @ModelAttribute Customer customer, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "index";
 		}
-		request = (HttpServletRequest) request;
-		if (null == request.getCookies()) {
-			return "enableCookie";
-		} else {
-			customer = customerService.authenticate(customer);
+		/*
+		 * if (null == request.getCookies()) { return "enableCookie"; }
+		 */
+		customer = customerService.authenticate(customer);
 
-			request.getSession(false);
-			session.setAttribute("customer", customer);
-			return "redirect:/home";
-		}
+		request.getSession(false);
+		session.setAttribute("customer", customer);
+		return "redirect:/home";
 	}
 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)

@@ -1,0 +1,270 @@
+src/main/java/com/capgemini/bankwebportal/BankwebportalApplication.java:7:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/com/capgemini/bankwebportal/BankwebportalApplication.java:7:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/BankwebportalApplication.java:9:	Parameter 'args' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/BankwebportalApplication.java:9:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:3:	Avoid unused imports such as 'java.sql.SQLException'
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:17:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:17:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:20:	Avoid excessively long variable names like bankAccountService
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:20:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:23:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:26:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:26:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:26:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:30:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Parameter 'amount' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Parameter 'fromAcc' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Parameter 'toAcc' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/BankAccountController.java:37:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:3:	Avoid unused imports such as 'java.sql.SQLException'
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:20:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:20:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:23:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:26:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:26:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:27:	The String literal "customer" appears 11 times in this file; the first occurrence is on line 30
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:33:	Avoid reassigning parameters such as 'request'
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:33:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:33:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:34:	Avoid reassigning parameters such as 'customer'
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:34:	Parameter 'bindingResult' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:36:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:40:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:51:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:51:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:51:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:53:	Local variable 'cust' could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:58:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:63:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:63:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:63:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:63:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:67:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:74:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:74:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:74:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:74:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:82:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:82:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:82:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:82:	The method 'updatePasswordMethod(HttpServletRequest, HttpSession, String, String)' has a NCSS line count of 12.
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:83:	Parameter 'newPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:83:	Parameter 'oldPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:85:	Local variable 'customer' could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:87:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:89:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:92:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:101:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:101:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:101:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:104:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:111:	Avoid reassigning parameters such as 'customer'
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:111:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:111:	Parameter 'session' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:111:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/CustomerController.java:113:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:15:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:15:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:18:	Parameter 'exception' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:18:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:18:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:18:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:20:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:24:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:29:	Avoid the use of value in annotations when its the only element
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:30:	Parameter 'exception' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:30:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:30:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:32:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:34:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:39:	Parameter 'exception' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:39:	Parameter 'request' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:39:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:40:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/controller/ExceptionController.java:42:	System.out.println is used
+src/main/java/com/capgemini/bankwebportal/exceptions/AccountNotFoundException.java:3:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/exceptions/AccountNotFoundException.java:5:	Parameter 'message' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/exceptions/AccountNotFoundException.java:5:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/exceptions/InsufficientAccountBalanceException.java:3:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/exceptions/InsufficientAccountBalanceException.java:5:	Parameter 'message' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/exceptions/InsufficientAccountBalanceException.java:5:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/exceptions/NegativeAmountException.java:3:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/exceptions/NegativeAmountException.java:5:	Parameter 'message' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/exceptions/NegativeAmountException.java:5:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:5:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:5:	The class 'BankAccount' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=6, WMC=8)
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:7:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:8:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:9:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:58:	Parameter 'obj' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:59:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:60:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:60:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:61:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:62:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:62:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:63:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:64:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/BankAccount.java:64:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:14:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:14:	The class 'Customer' is suspected to be a Data Class (WOC=0.000%, NOPA=0, NOAM=14, WMC=16)
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:26:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:26:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:27:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:27:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:31:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:31:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:33:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:33:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:34:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:34:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:36:	Avoid excessively long variable names like customerDateOfBirth
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:36:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:36:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:37:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:37:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:44:	Avoid excessively long variable names like customerDateOfBirth
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:44:	Parameter 'account' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:44:	Parameter 'customerAddress' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:44:	Parameter 'customerDateOfBirth' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:117:	Parameter 'obj' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:118:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:119:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:119:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:120:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:121:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:121:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:122:	Avoid using if statements without curly braces
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:123:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/capgemini/bankwebportal/model/Customer.java:123:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/repository/BankAccountRepository.java:3:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/BankAccountRepository.java:5:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/repository/BankAccountRepository.java:5:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:7:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:9:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:9:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:11:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:11:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:13:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:13:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:15:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/repository/CustomerRepository.java:15:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:12:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:12:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:15:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:18:	Parameter 'accountId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:29:	Parameter 'accountId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:29:	Parameter 'newBalance' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:30:	Local variable 'count' could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/BankAccountRepositoryImpl.java:32:	Avoid if (x != y) ..; else ..;
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:18:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:18:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:21:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:24:	Avoid reassigning parameters such as 'customer'
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:29:	Local variable 'bankAccount' could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:41:	Avoid reassigning parameters such as 'customer'
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:52:	Parameter 'customer' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:52:	Parameter 'newPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:52:	Parameter 'oldPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:60:	Parameter 'customerId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:61:	Local variable 'customer' could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:63:	Local variable 'bankAccount' could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:70:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:70:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:73:	Avoid variables with short names like rs
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:73:	Parameter 'rowNum' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:73:	Parameter 'rs' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:74:	Local variable 'customer' could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:80:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:80:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:86:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:86:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:89:	Avoid variables with short names like rs
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:89:	Parameter 'rowNum' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:89:	Parameter 'rs' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/repository/impl/CustomerRepositoryImpl.java:90:	Local variable 'bankAccount' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/BankAccountService.java:4:	Avoid unused imports such as 'java.sql.SQLException'
+src/main/java/com/capgemini/bankwebportal/service/BankAccountService.java:7:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/service/BankAccountService.java:9:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/service/BankAccountService.java:9:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/service/CustomerService.java:6:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/service/CustomerService.java:8:	Avoid modifiers which are implied by the context
+src/main/java/com/capgemini/bankwebportal/service/CustomerService.java:8:	Public method and constructor comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:3:	Avoid unused imports such as 'java.sql.SQLException'
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:14:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:14:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:16:	Use explicit scoping instead of the default package private level
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:17:	Avoid excessively long variable names like bankAccountRepositoryImpl
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:17:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:17:	To avoid mistakes add a comment at the beginning of the bankAccountRepositoryImpl field if you want a default access modifier
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:18:	Use explicit scoping instead of the default package private level
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:19:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:19:	To avoid mistakes add a comment at the beginning of the serviceobject field if you want a default access modifier
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:22:	Parameter 'accountId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:26:	Local variable 'accountNotFound' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:33:	Parameter 'accountId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:33:	Parameter 'amount' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:34:	Local variable 'accountBalance' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:40:	Parameter 'accountId' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:40:	Parameter 'amount' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:41:	Local variable 'accountBalance' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:47:	Parameter 'amount' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:47:	Parameter 'fromAcc' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:47:	Parameter 'toAcc' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:49:	Avoid excessively long variable names like accountBalanceFrom
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:49:	Local variable 'accountBalanceFrom' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:52:	Avoid using if...else statements without curly braces
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:52:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:54:	Avoid using if...else statements without curly braces
+src/main/java/com/capgemini/bankwebportal/service/impl/BankAccountServiceImpl.java:54:	This statement should have braces
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:3:	Avoid unused imports such as 'java.sql.SQLException'
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:13:	Each class should declare at least one constructor
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:13:	Header comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:16:	Avoid excessively long variable names like customerRepository
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:16:	Field comments are required
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:19:	Parameter 'customer' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:23:	Local variable 'accountNotFound' could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:30:	Parameter 'customer' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:35:	Parameter 'customer' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:35:	Parameter 'newPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:35:	Parameter 'oldPassword' is not assigned and could be declared final
+src/main/java/com/capgemini/bankwebportal/service/impl/CustomerServiceImpl.java:40:	Parameter 'customerId' is not assigned and could be declared final
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:18:	Each class should declare at least one constructor
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:18:	Header comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:20:	Field comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:20:	To avoid mistakes add a comment at the beginning of the customer field if you want a default access modifier
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:20:	Use explicit scoping instead of the default package private level
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:21:	Use explicit scoping instead of the default package private level
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:22:	Avoid excessively long variable names like customerController
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:22:	Field comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:22:	To avoid mistakes add a comment at the beginning of the customerController field if you want a default access modifier
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:24:	Use explicit scoping instead of the default package private level
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:25:	Field comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:25:	To avoid mistakes add a comment at the beginning of the request field if you want a default access modifier
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:27:	Use explicit scoping instead of the default package private level
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:28:	Field comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:28:	To avoid mistakes add a comment at the beginning of the session field if you want a default access modifier
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:30:	Use explicit scoping instead of the default package private level
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:31:	Field comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:31:	To avoid mistakes add a comment at the beginning of the bindingResult field if you want a default access modifier
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:34:	JUnit tests should include assert() or fail()
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:34:	Public method and constructor comments are required
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:35:	Local variable 'customer' could be declared final
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:38:	Avoid unused local variables such as 'result'.
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:38:	Found 'DU'-anomaly for variable 'result' (lines '38'-'42').
+src/test/java/com/capgemini/bankwebportal/BankwebportalApplicationTests.java:38:	Local variable 'result' could be declared final

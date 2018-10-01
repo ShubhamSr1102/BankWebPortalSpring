@@ -15,7 +15,7 @@ import com.capgemini.bankwebportal.model.Customer;
 public class ExceptionController {
 
 	@ExceptionHandler(value = AccountNotFoundException.class)
-	public String AccountNotFoundException(HttpServletRequest request, AccountNotFoundException exception,
+	public String accountNotFoundException(HttpServletRequest request, AccountNotFoundException exception,
 			Model model) {
 		System.out.println(exception);
 
@@ -27,7 +27,7 @@ public class ExceptionController {
 	}
 
 	@ExceptionHandler(value = InsufficientAccountBalanceException.class)
-	public String InsufficientAccountBalanceException(HttpServletRequest request,
+	public String insufficientAccountBalanceException(HttpServletRequest request,
 			InsufficientAccountBalanceException exception) {
 		System.out.println(exception);
 		request.setAttribute("insufficientbalance", "true");
@@ -36,7 +36,7 @@ public class ExceptionController {
 	}
 
 	@ExceptionHandler(value = NegativeAmountException.class)
-	public String NegativeAmountException(HttpServletRequest request, NegativeAmountException exception) {
+	public String negativeAmountException(HttpServletRequest request, NegativeAmountException exception) {
 		System.out.println(exception);
 		request.setAttribute("negativeamount", "true");
 		System.out.println(exception.getCause());
