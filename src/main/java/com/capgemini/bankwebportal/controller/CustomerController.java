@@ -42,20 +42,14 @@ public class CustomerController {
 		if (null == request.getCookies()) {
 			return "enableCookie";
 		} else {
-			try {
-				customer = customerService.authenticate(customer);
-			} catch (SQLException | NumberFormatException | EmptyResultDataAccessException e) {
-				request.setAttribute("name", "true");
-				customer = null;
-			} finally {
-				if (customer != null) {
-					request.getSession(false);
-					session.setAttribute("customer", customer);
-					return "redirect:/home";
-				} else
-					return "index";
-			}
+			customer = customerService.authenticate(customer);
 
+			if (customer.getCustomerName() != null) {
+				request.getSession(false);
+				session.setAttribute("customer", customer);
+				return "redirect:/home";
+			}
+			return "index";
 		}
 	}
 

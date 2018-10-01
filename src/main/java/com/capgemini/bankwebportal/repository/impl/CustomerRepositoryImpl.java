@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -19,18 +21,25 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public Customer authenticate(Customer customer) throws SQLException {
-		customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id = ? AND customer_password = ?",
-				new Object[] { customer.getCustomerId(),customer.getCustomerPassword() }, new CustomerRowMapper());
-		BankAccount bankAccount = jdbcTemplate.queryForObject(
-				"SELECT * FROM accounts WHERE account_id = (SELECT account_id FROM customers WHERE customer_id = ?)",
-				new Object[] { customer.getCustomerId() }, new AccountRowMapper());
-		customer.setAccount(bankAccount);
-		return customer;
+	public Customer authenticate(Customer customer) throws DataAccessException {
+		try {
+			customer = jdbcTemplate.queryForObject(
+					"SELECT * FROM customers WHERE customer_id = ? AND customer_password = ?",
+					new Object[] { customer.getCustomerId(), customer.getCustomerPassword() }, new CustomerRowMapper());
+			BankAccount bankAccount = jdbcTemplate.queryForObject(
+					"SELECT * FROM accounts WHERE account_id = (SELECT account_id FROM customers WHERE customer_id = ?)",
+					new Object[] { customer.getCustomerId() }, new AccountRowMapper());
+					customer.setAccount(bankAccount);
+					return customer;
+		} catch (DataAccessException e) {
+			e.initCause(new EmptyResultDataAccessException("Expected 1 actual 0 ", 1));
+			// System.out.println("repo "+ e.getCause());
+			throw e;
+		}
 	}
 
 	@Override
-	public Customer updateProfile(Customer customer)throws SQLException {
+	public Customer updateProfile(Customer customer) throws DataAccessException {
 		jdbcTemplate.update(
 				"UPDATE customers SET customer_address = ?,customer_dob = ?,customer_emailid=?,customer_name=?   WHERE customer_id = ?",
 				new Object[] { customer.getCustomerAddress(), customer.getCustomerDateOfBirth(),
@@ -47,11 +56,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 				"UPDATE customers SET customer_password = ?  WHERE customer_id = ? AND customer_password = ?",
 				new Object[] { newPassword, customer.getCustomerId(), oldPassword });
 		return (count != 0) ? true : false;
-		
+
 	}
 
 	@Override
-	public Customer updateSession(long customerId)throws SQLException {
+	public Customer updateSession(long customerId) throws DataAccessException {
 		Customer customer = jdbcTemplate.queryForObject("SELECT * FROM customers WHERE customer_id=?",
 				new Object[] { customerId }, new CustomerRowMapper());
 		BankAccount bankAccount = jdbcTemplate.queryForObject(
