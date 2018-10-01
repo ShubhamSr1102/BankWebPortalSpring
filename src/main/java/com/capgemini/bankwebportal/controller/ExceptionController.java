@@ -32,7 +32,7 @@ public class ExceptionController {
 		System.out.println(exception);
 		request.setAttribute("insufficientbalance", "true");
 		System.out.println(exception.getCause());
-		return "success";
+		return "fundTransfer";
 	}
 
 	@ExceptionHandler(value = NegativeAmountException.class)
@@ -40,6 +40,6 @@ public class ExceptionController {
 		System.out.println(exception);
 		request.setAttribute("negativeamount", "true");
 		System.out.println(exception.getCause());
-		return "edit";
+		return "fundTransfer";
 	}
 }
