@@ -48,9 +48,7 @@ public class CustomerController {
 	public String homePage(HttpServletRequest request, HttpSession session) {
 		request.getSession(false);
 		Customer cust = (Customer) session.getAttribute("customer");
-		Customer customer;
-
-		customer = customerService.updateSession(cust.getCustomerId());
+		Customer customer = customerService.updateSession(cust.getCustomerId());
 
 		request.getSession().setAttribute("customer", customer);
 		return "home";
