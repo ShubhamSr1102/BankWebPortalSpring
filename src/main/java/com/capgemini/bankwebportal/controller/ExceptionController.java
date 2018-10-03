@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.capgemini.bankwebportal.exceptions.AccountNotFoundException;
+import com.capgemini.bankwebportal.exceptions.DepositAccountNotFoundException;
 import com.capgemini.bankwebportal.exceptions.InsufficientAccountBalanceException;
 import com.capgemini.bankwebportal.exceptions.NegativeAmountException;
 import com.capgemini.bankwebportal.model.Customer;
@@ -26,6 +27,16 @@ public class ExceptionController {
 		return "index";
 	}
 
+	@ExceptionHandler(value = DepositAccountNotFoundException.class)
+	public String depositAccountNotFoundException(HttpServletRequest request, DepositAccountNotFoundException exception,
+			Model model) {
+		System.out.println(exception);
+
+		request.setAttribute("accountnotfound", "true");
+		System.out.println(exception.getCause());
+		return "fundTransfer";
+	}
+	
 	@ExceptionHandler(value = InsufficientAccountBalanceException.class)
 	public String insufficientAccountBalanceException(HttpServletRequest request,
 			InsufficientAccountBalanceException exception) {
