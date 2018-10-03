@@ -1,4 +1,4 @@
-package com.capgemini.bankwebportal;
+/*package com.capgemini.bankwebportal;
 
 import static org.junit.Assert.assertEquals;
 
@@ -97,3 +97,4 @@ public class BankwebportalApplicationTests {
 	
 	
 }
+*/

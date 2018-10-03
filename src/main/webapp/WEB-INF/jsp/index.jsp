@@ -39,7 +39,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item active">
-                <a class="nav-link" href="index.jsp"><b><strong>Home</strong> </b><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/"><b><strong>Home</strong> </b><span class="sr-only">(current)</span></a>
             </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item">
                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"><b><strong>Edit Profile</strong></b></a>

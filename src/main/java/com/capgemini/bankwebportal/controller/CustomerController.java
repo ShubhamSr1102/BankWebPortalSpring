@@ -12,11 +12,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.capgemini.bankwebportal.model.Customer;
 import com.capgemini.bankwebportal.service.CustomerService;
 
 @Controller
+@SessionAttributes("customer")
 public class CustomerController {
 
 	@Autowired
@@ -28,43 +32,56 @@ public class CustomerController {
 		return "index";
 	}
 
+	@ModelAttribute("customer")
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String customerLogin(HttpServletRequest request, HttpSession session,
-			@Valid @ModelAttribute Customer customer, BindingResult bindingResult) {
+	public ModelAndView customerLogin(@Valid @ModelAttribute Customer customer, BindingResult bindingResult) {
+		ModelAndView modelAndView =  new ModelAndView();
 		if (bindingResult.hasErrors()) {
-			return "index";
+			modelAndView.setViewName("index");
+			return modelAndView;
 		}
 		/*
 		 * if (null == request.getCookies()) { return "enableCookie"; }
 		 */
 		customer = customerService.authenticate(customer);
-
-		request.getSession(false);
-		session.setAttribute("customer", customer);
-		return "redirect:/home";
+		modelAndView.addObject("customer", customer);
+		modelAndView.setViewName("redirect:/home");
+		//model.addAttribute("customer", customer);
+		return modelAndView;
 	}
 
+	@ModelAttribute("customer")
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public String homePage(HttpServletRequest request, HttpSession session) {
-		request.getSession(false);
-		Customer cust = (Customer) session.getAttribute("customer");
-		Customer customer = customerService.updateSession(cust.getCustomerId());
-
-		request.getSession().setAttribute("customer", customer);
-		return "home";
+	public ModelAndView homePage(@SessionAttribute("customer") Customer customer) {
+		ModelAndView modelAndView =  new ModelAndView();
+		customer = customerService.updateSession(customer.getCustomerId());
+		modelAndView.addObject("customer", customer);
+		modelAndView.setViewName("home");
+		return modelAndView;
 	}
-
+	
 	@RequestMapping(value = "/editProfile", method = RequestMethod.GET)
-	public String editProfile(Model model, HttpServletRequest request, HttpSession session) {
-		model.addAttribute("customer", session.getAttribute("customer"));
-		request.getSession(false);
-		if (null == session.getAttribute("customer")) {
+	public String editProfile(Model model, @SessionAttribute("customer") Customer customer) {
+		model.addAttribute("customer", customer);
+		if (null == customer.getCustomerName()) {
 			return "error";
 		} else {
 			return "edit";
 		}
 	}
+	
+	@ModelAttribute("customer")
+	@RequestMapping(value = "/updateProfile", method = RequestMethod.POST)
+	public ModelAndView updateProfileMethod(@ModelAttribute Customer customer) {
+		ModelAndView modelAndView =  new ModelAndView();
+		customer = customerService.updateProfile(customer);
+		modelAndView.addObject("customer", customer);
+		modelAndView.setViewName("redirect:/home");
+		return modelAndView;
 
+	}
+	
+	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(Model model, HttpServletRequest request, HttpSession session) {
 		request.getSession(false);
@@ -73,40 +90,37 @@ public class CustomerController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/updatePasswordMethod", method = RequestMethod.POST)
-	public String updatePasswordMethod(HttpServletRequest request, HttpSession session,
-			@RequestParam String oldPassword, @RequestParam String newPassword) {
-		request.getSession(false);
-		Customer customer = (Customer) (session.getAttribute("customer"));
-		// customer.setCustomerPassword(oldPassword);
-		if (oldPassword.equals(customer.getCustomerPassword())) {
-			if (customerService.updatePassword(customer, oldPassword, newPassword)) {
-				return "redirect:/home";
-			} else {
-				request.setAttribute("passwordnotchanged", "true");
-				return "changePassword";
-			}
-		} else {
-			request.setAttribute("oldpassword", "false");
-			return "changePassword";
-		}
-	}
-
 	@RequestMapping(value = "/updatePassword", method = RequestMethod.GET)
-	public String updatePassword(HttpServletRequest request, HttpSession session) {
-		request.getSession(false);
-		if (null == session.getAttribute("customer")) {
+	public String updatePassword(@SessionAttribute("customer") Customer customer) {
+		if (null == customer.getCustomerName()) {
 			return "error";
 		} else {
 			return "changePassword";
 		}
 	}
 
-	@RequestMapping(value = "/updateProfile", method = RequestMethod.POST)
-	public String updateProfile(@ModelAttribute Customer customer, HttpServletRequest request, HttpSession session) {
-		customer = customerService.updateProfile(customer);
-		request.getSession().setAttribute("customer", customer);
-		return "redirect:/home";
-
+	@ModelAttribute("customer")
+	@RequestMapping(value = "/updatePasswordMethod", method = RequestMethod.POST)
+	public ModelAndView updatePasswordMethod(HttpServletRequest request, @SessionAttribute("customer") Customer customer,@RequestParam String oldPassword, @RequestParam String newPassword) {
+		// customer.setCustomerPassword(oldPassword);
+		ModelAndView modelAndView =  new ModelAndView();
+		if (oldPassword.equals(customer.getCustomerPassword())) {
+			if (customerService.updatePassword(customer, oldPassword, newPassword)) {
+				modelAndView.addObject("customer", customer);
+				modelAndView.setViewName("redirect:/home");
+				return modelAndView;
+			} else {
+				request.setAttribute("passwordnotchanged", "true");
+				modelAndView.setViewName("changePassword");
+				return modelAndView;
+			}
+		} else {
+			request.setAttribute("oldpassword", "false");
+			modelAndView.setViewName("changePassword");
+			return modelAndView;
+		}
 	}
+
+
+	
 }
